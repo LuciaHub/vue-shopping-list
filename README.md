@@ -1,4 +1,4 @@
-# vue-shopping-list
+# lista-compra
 
 ## Project setup
 ```

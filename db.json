@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Arroz",
+      "ammount": 2,
+      "bought": true
+    },
+    {
+      "id": 2,
+      "name": "Huevos",
+      "ammount": 1,
+      "bought": false
+    },
+    {
+      "id": 2,
+      "name": "Tomates",
+      "ammount": 1,
+      "bought": false
+    }
+  ]
+}
