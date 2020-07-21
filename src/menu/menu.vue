@@ -12,7 +12,7 @@
       return {
         drawer: null,
         items: [
-          { title: 'Lista productos', icon: 'dashboard' }
+          { title: 'Lista productos' }
         ],
       }
     },
