@@ -1,26 +1,16 @@
 <template>
-  <div>
-    <v-app-bar>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      <v-toolbar-title>Mi lista de la compra</v-toolbar-title>
-      
-      <v-menu>
-        <template>
-          <v-btn>
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item>
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-
-      </v-menu>
-    </v-app-bar>
-  </div>
+  <v-app>
+    <v-navigation-drawer app><Menu/></v-navigation-drawer>
+    <v-app-bar app>Mi lista de la compra</v-app-bar>
+    <v-main>Main</v-main>
+  </v-app>
 </template>
+<script>
+import Menu from './menu/menu';
+export default {
+  name: "App",
+  components: {
+    Menu
+  }
+};
+</script>
