@@ -11,7 +11,12 @@ export default {
   data() {
     return {
       drawer: null,
-      items: [{ title: "Lista productos", link: "/" }]
+      items: [
+        { title: "Lista productos", link: "/", icon: "playlist-edit"},
+        { title: "Añadir", link: "/Add", icon: "shape-rectangle-add"},
+
+      ]
+      
     };
   }
 };
@@ -20,11 +25,9 @@ export default {
 
 <style scoped>
 .menu {
-  background-color: rgb(red, green, blue);
-  width: 200px;
-  height: 100%;
+  background-color: rgb(215, 210, 226);
+  width: 100%;
+  height: 100vh;
   text-align: center;
-
-  
 }
 </style>

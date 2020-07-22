@@ -2,7 +2,7 @@
   <v-app>
     <v-navigation-drawer app><Menu/></v-navigation-drawer>
     <v-app-bar app>Mi lista de la compra</v-app-bar>
-    <v-main>Main</v-main>
+    <v-main>Notas</v-main>
   </v-app>
 </template>
 <script>
@@ -14,3 +14,4 @@ export default {
   }
 };
 </script>
+
