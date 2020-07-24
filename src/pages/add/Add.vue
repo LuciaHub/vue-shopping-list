@@ -1,22 +1,27 @@
 <template>
-  <div class='conter'>
-    <template>
-      <v-form ref="form" v-model="valid" lazy-validation class='form'>
-
-        <v-text-field :rules="productRules" label="Producto" required></v-text-field>
-        <v-text-field label="Cantidad" :rules="cantidadRules" required></v-text-field>
-        <v-btn :disabled="!valid" color="success" class="mr-4" @click=created validate >Crear</v-btn>
-        <v-btn color="error" class="mr-4" @click="reset">Reset Form</v-btn>
-
-      </v-form>
-    </template>
-  </div>
+<div class="Add">
+    <v-form>
+      <v-container>
+        <v-row>
+  
+          <v-col cols="12" sm="6" md="3">
+             <v-text-field
+               label="Producto"
+             ></v-text-field>
+          </v-col>
+          <v-col cols="12" sm="6" md="3">
+             <v-text-field
+               label="Cantidad"
+             ></v-text-field>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-form>
+</div>
 </template>
   
-
-
 <script>
-import axios from 'axios';
+
 export default {
   name: "Add",
 
@@ -26,33 +31,15 @@ export default {
     cantidad: "",
   }),
 
-  methods: {
-    validate() {
-      this.$refs.form.validate();
-    },
+    methods: {
     reset() {
       this.$refs.form.reset();
     },
-    resetValidation() {
-      this.$refs.form.resetValidation();
-    },
-    editar() {
-     this.$refs.form.disabled();
-    },
-      
-    created() {
-      let post = {
-      Producto: '',
-      cantidad: '',
-      bought: false
-  };
-    axios.post("http://localhost:3005/items", post).then((result) => {
-      console.log(result);
-    } );
+    crear(){
+      console.log(this.model);
+    }
+  },
  
-  }
-   
-  }
 };
 </script>
 
